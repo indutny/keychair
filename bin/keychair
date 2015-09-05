@@ -4,5 +4,4 @@ var fs = require('fs');
 
 var chain = fs.readFileSync(process.argv[2]);
 var out = keychair.parse(chain);
-return;
 console.log(require('util').inspect(out, false, 300));

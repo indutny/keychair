@@ -4,6 +4,7 @@
   "description": "Parse .keychain file",
   "main": "lib/keychair.js",
   "dependencies": {
+    "bn.js": "^3.1.2"
   },
   "devDependencies": {},
   "scripts": {
