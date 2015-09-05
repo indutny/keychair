@@ -1,0 +1,14 @@
+{
+  "name": "keychair",
+  "version": "1.0.0",
+  "description": "Parse .keychain file",
+  "main": "lib/keychair.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
