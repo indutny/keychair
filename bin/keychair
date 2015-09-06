@@ -3,5 +3,25 @@ var keychair = require('..');
 var fs = require('fs');
 
 var chain = fs.readFileSync(process.argv[2]);
-var out = keychair.parse(chain);
-console.log(require('util').inspect(out, false, 300));
+var passphrase = new Buffer(process.argv[3]);
+var out = keychair.parse(chain, process.argv[3]);
+var privateKeys = out.tables.privateKey.records;
+
+privateKeys.forEach(function(record) {
+  var name = record.attributes.PrintName + '';
+  name = name.replace(/[^a-z0-9\-_\.\s@]+/ig, '');
+  var key = record.data.key.dsa;
+  if (!key)
+    return;
+  if (key.dsaAlg.algorithm !== 'rsaEncryption')
+    return;
+
+  console.log(name);
+  console.log('-----BEGIN RSA PRIVATE KEY-----');
+
+  var pem = key.privateKey.toString('base64');
+  for (var i = 0; i < pem.length; i += 64)
+    console.log(pem.slice(i, i + 64));
+
+  console.log('-----END RSA PRIVATE KEY-----');
+});
