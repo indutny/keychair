@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <title>KeyChair</title>
+  </head>
+
+  <body>
+    <section id=content>
+      <h1>KeyChair</h1>
+
+      <section id="upload" class="active">
+        <section>
+          Select your <b>.keychain</b> file: <input type=file id=keychain />
+        </section>
+
+        <section id=drop>
+          Or drag &amp; drop it here.
+        </section>
+      </section>
+
+      <section id="enter">
+        <input type=password
+               id=passphrase
+               placeholder="Enter your passphrase and press enter" />
+      </section>
+
+      <section>
+        <select id=key-list disabled></select>
+        <br/>
+        <textarea id=key readonly></textarea>
+      </section>
+    </section>
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>

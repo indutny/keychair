@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+
+#content {
+  margin: 0 auto;
+  width: 50%;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+#content section {
+  margin: 16px 8px;
+}
+
+#drop {
+  background: #eee;
+  border: 1px solid #333;
+  padding: 32px 8px;
+}
+
+#drop.dropping {
+  background: #ffe;
+  border: 1px solid #555;
+}
+
+#key-list, #key, #passphrase {
+  width: 100%;
+  font-size: 24px;
+}
+
+#key {
+  font-size: 14px;
+}
+
+#key-list {
+  height: 24px;
+}
+
+#key {
+  height: 200px;
+}
+
+#upload, #enter {
+  display: none;
+}
+
+#upload.active, #enter.active {
+  display: block;
+}
