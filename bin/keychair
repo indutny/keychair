@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var chain = fs.readFileSync(process.argv[2]);
 var passphrase = new Buffer(process.argv[3]);
-var out = keychair.parse(chain, process.argv[3]);
+var out = keychair.parse(chain, passphrase);
 var privateKeys = out.tables.privateKey.records;
 
 privateKeys.forEach(function(record) {
