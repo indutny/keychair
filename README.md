@@ -1,5 +1,7 @@
 # KeyChair
 
+Extract RSA private keys out of .keychain files -- even the seemingly unextractable ones.
+
 ## LICENSE
 
 This software is licensed under the MIT License.
